@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - Antigravity Paper Co.">
+  <main>
+    <section class="contact-card">
+      <h1>Initiate <span class="highlight">Protocol</span></h1>
+      <p>Secure your supply of analog lattice structures.</p>
+      
+      <form action="/success" method="GET">
+        <div class="form-group">
+          <label for="name">Identifier (Name)</label>
+          <input type="text" id="name" name="name" required placeholder="e.g. Acme Corp Inc." />
+        </div>
+        
+        <div class="form-group">
+          <label for="size">Organizational Mass</label>
+          <select id="size" name="size">
+            <option>Seed Stage (1-10)</option>
+            <option>Series A (10-50)</option>
+            <option>Enterprise (50+)</option>
+            <option>Galactic Empire</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Data Payload</label>
+          <textarea id="message" name="message" rows="4" placeholder="Specify texture parameters..."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Transmit Request</button>
+      </form>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .contact-card {
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 3rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 50px rgba(0, 243, 255, 0.1);
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .btn:hover {
+    background: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+</style>

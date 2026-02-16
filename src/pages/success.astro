@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Transmission Received">
+  <main>
+    <div class="success-content">
+      <div class="icon">🚀</div>
+      <h1>Transmission <span class="highlight">Success</span></h1>
+      <p>Our autonomous paper-delivery drones have been dispatched to your mental coordinates.</p>
+      <p class="small">Expected latency: 3-5 business days.</p>
+      <a href="/" class="btn">Return to Base</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .success-content {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .icon {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto 1rem;
+  }
+
+  .small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: var(--color-secondary);
+    color: white;
+    box-shadow: 0 0 30px rgba(112, 0, 255, 0.4);
+  }
+</style>
