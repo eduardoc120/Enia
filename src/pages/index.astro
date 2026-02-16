@@ -2,20 +2,161 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Antigravity Paper Co.">
+<Layout title="Antigravity Paper Co. - The Future">
 	<main>
-		<h1>Antigravity Paper Co.</h1>
+		<section class="hero">
+			<h1>The <span class="gradient-text">Future</span> of <br/> Cellulose Intelligence</h1>
+			<p class="subtitle">Experience the tactile revolution. Zero latency. Infinite resolution. 100% Biodegradable.</p>
+			<div class="cta-group">
+				<a href="#features" class="btn primary">Explore Technology</a>
+				<a href="/contact" class="btn secondary">Pre-Order Sheet</a>
+			</div>
+		</section>
+
+		<section id="features" class="features">
+			<div class="card float" style="animation-delay: 0s;">
+				<h2>Quantum-Ready Surface</h2>
+				<p>Our proprietary wood-pulp matrix is compatible with all analog writing instruments, offering 0ms input lag.</p>
+			</div>
+			<div class="card float" style="animation-delay: 1s;">
+				<h2>Zero-Energy Retention</h2>
+				<p>Once data is inscribed, it remains visible for centuries without a power source. The ultimate cold storage.</p>
+			</div>
+			<div class="card float" style="animation-delay: 2s;">
+				<h2>Haptic Experience</h2>
+				<p>Feel the data. Our textured interface provides real-time physical feedback for every pixel.</p>
+			</div>
+		</section>
+
+		<section class="quote">
+			<blockquote>"It's like a tablet, but lighter. And it smells like a forest."</blockquote>
+			<cite>— Elon M. (No relation), Visionary CEO</cite>
+		</section>
 	</main>
 </Layout>
 
 <style>
 	main {
 		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+		padding: 4rem 2rem;
+		max-width: 1200px;
+		color: var(--color-text);
+	}
+
+	.hero {
+		text-align: center;
+		padding: 8rem 0;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1 {
+		font-size: 4rem;
+		margin-bottom: 2rem;
+		line-height: 1.1;
+	}
+
+	.gradient-text {
+		background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+		max-width: 800px;
+		margin: 0 auto 3rem;
+		color: rgba(224, 224, 224, 0.8);
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 4px;
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		transition: all 0.3s ease;
+	}
+
+	.btn.primary {
+		background: var(--color-primary);
+		color: var(--color-bg);
+		box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+	}
+
+	.btn.primary:hover {
+		box-shadow: 0 0 40px rgba(0, 243, 255, 0.6);
+		transform: translateY(-2px);
+	}
+
+	.btn.secondary {
+		border: 1px solid var(--color-primary);
+		color: var(--color-primary);
+	}
+
+	.btn.secondary:hover {
+		background: rgba(0, 243, 255, 0.1);
+	}
+
+	.features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 4rem 0;
+	}
+
+	.card {
+		background: rgba(255, 255, 255, 0.03);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		padding: 2rem;
+		border-radius: 12px;
+		transition: transform 0.3s ease;
+	}
+
+	.card:hover {
+		border-color: var(--color-primary);
+		box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+	}
+
+	.card h2 {
+		font-size: 1.2rem;
+		color: var(--color-primary);
+		margin-bottom: 1rem;
+	}
+
+	.quote {
+		text-align: center;
+		padding: 6rem 0;
+		font-style: italic;
+	}
+
+	blockquote {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--color-paper);
+	}
+
+	cite {
+		font-size: 1rem;
+		color: var(--color-secondary);
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+		.cta-group {
+			flex-direction: column;
+		}
 	}
 </style>
