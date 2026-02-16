@@ -16,15 +16,19 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   main {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem;
   }
 
   .success-content {
     animation: float 6s ease-in-out infinite;
+    width: 100%;
+    max-width: 600px;
+    overflow-wrap: break-word;
   }
 
   .icon {
@@ -44,8 +48,8 @@ import Layout from '../layouts/Layout.astro';
   p {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
     margin: 0 auto 1rem;
+    padding: 0 1rem;
   }
 
   .small {
