@@ -1,0 +1,81 @@
+---
+---
+<nav>
+  <div class="logo">
+    <a href="/">ANTIGRAVITY<span class="highlight">PAPER</span></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">IMPACT</a></li>
+    <li><a href="/about">ORIGIN</a></li>
+    <li><a href="/contact">INTERFACE</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 5, 5, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+  }
+
+  .logo a {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+      gap: 1.5rem;
+    }
+  }
+</style>
