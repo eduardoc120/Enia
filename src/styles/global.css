@@ -34,6 +34,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  word-wrap: break-word; /* Prevent overflow */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Scale down base font size */
+  }
 }
 
 a {
