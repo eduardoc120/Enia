@@ -121,10 +121,12 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     main {
-      padding: 8rem 1rem 2rem;
+      padding: 10rem 2rem 4rem; /* More space top/bottom/sides */
+      min-height: 100vh; /* Ensure full height */
     }
     .contact-card {
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 2rem;
+      width: 100%;
     }
   }
 </style>
